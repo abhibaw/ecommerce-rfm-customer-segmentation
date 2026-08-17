@@ -33,23 +33,48 @@ December 2011. Includes invoice-level data across multiple countries.
 
 ## 🗂️ Project Structure
 
+```text
 ecommerce-rfm-customer-segmentation/
+│
 ├── data/
-│ ├── raw/ # Original dataset
-│ └── processed/ # Cleaned & intermediate CSVs
-├── notebooks/
-│ ├── 01_eda.ipynb # Data cleaning & exploration
-│ ├── 02_sql_analysis.ipynb # PostgreSQL analytical queries
-│ ├── 03_rfm_scoring.ipynb # RFM calculation & rule-based segments
-│ ├── 04_kmeans_clustering.ipynb # K-Means clustering & cluster profiling
-│ └── 05_insights_export.ipynb # Business insights & final export
+│   ├── raw/
+│   │   └── online_retail_II.csv
+│   │
+│   └── processed/
+│       ├── cleaned_transactions.csv
+│       ├── sql_revenue_by_country.csv
+│       ├── sql_revenue_by_month.csv
+│       ├── sql_repeat_vs_onetime.csv
+│       ├── sql_top_products.csv
+│       ├── rfm_table.csv
+│       ├── rfm_kmeans_table.csv
+│       ├── customer_segments_final.csv
+│       └── segment_summary_with_actions.csv
+│
+├── notebook/
+│   ├── 01_eda.ipynb
+│   ├── 02_sql_analysis.ipynb
+│   ├── 03_rfm_scoring.ipynb
+│   ├── 04_kmeans_clustering.ipynb
+│   └── 05_insights_export.ipynb
+│
 ├── sql/
-│ └── queries.sql # Standalone SQL queries for review
-├── outputs/
-│ ├── figures/ # Saved charts
-│ └── customer_segments_final.csv # Final deliverable
+│   └── queries.sql
+│
+├── images/
+│   ├── top_countries.png
+│   ├── transaction_value_distribution.png
+│   ├── rfm_distributions.png
+│   ├── rfm_segment_distribution.png
+│   ├── rfm_log_distributions.png
+│   ├── elbow_method.png
+│   ├── silhouette_scores.png
+│   ├── kmeans_3d_clusters.png
+│   └── revenue_pct_by_segment.png
+│
 ├── requirements.txt
 └── README.md
+```
 
 
 ## 🔄 Analysis Pipeline
